@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&family=Charis+SIL:ital@1&family=Kaushan+Script&display=swap');
 /* Navbar styles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -10,6 +16,7 @@
     padding-inline: 50;
     line-height: '64px';
     background-color: '#7dbcea';
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
   .navbar-logo img {
@@ -22,6 +29,7 @@
   
   .navbar-avatar img {
     vertical-align: middle;
+    margin: 10px 15px 15px 10px;
     width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -30,11 +38,11 @@
 
   .navbar-title{
     font-family: "Kaushan Script", cursive;
-    padding-top: 0%;
+    padding-top: 10px;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
+
+ 
   }
   
   /* Main section styles */
@@ -50,50 +58,59 @@
   .description h1 {
     font-size: 5rem;
     margin-bottom: 1rem;
+    padding: 10px;
     font-family: "Kaushan Script", cursive;
   }
   
   .description p {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    padding: 10px 10px 10px 10px;
     font-family: "Charis SIL", serif;
   }
   
-  .search-bar {
+/*  Search Bar */
+.search-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search {
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
     width: 200px;
-    transition: width 0.3s;
   }
   
-  .search-bar.expanded {
-    width: 300px;
-  }
-  
-  .search-bar input[type="text"] {
-    flex-grow: 1;
-    padding: 0.5rem;
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: black;
     border: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0 20px 20px 0;
+    color: white;
   }
   
-  .search-bar button {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #007bff;
-    color: #fff;
+  .button:hover {
+    background-color: #333;
     cursor: pointer;
   }
   
-  .search-bar button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive styles */
   @media screen and (max-width: 768px) {
-    .search-bar input[type="text"] {
-      width: 100%;
+    .search-container {
+      flex-direction: column;
+    }
+  
+    .search {
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .button {
+      border-radius: 20px;
     }
   }
-  
   
