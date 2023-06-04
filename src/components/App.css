@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&family=Charis+SIL:ital@1&family=Kaushan+Script&display=swap');
 /* Navbar styles */
 
 .navbar {
@@ -26,6 +27,15 @@
         border-radius: 50%;
     border-radius: 50%;
   }
+
+  .navbar-title{
+    font-family: "Kaushan Script", cursive;
+    padding-top: 0%;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
   
   /* Main section styles */
   .main-section {
@@ -38,32 +48,45 @@
   }
   
   .description h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
+    font-family: "Kaushan Script", cursive;
   }
   
   .description p {
-    font-size: 1.2rem;
+    font-size: 3rem;
+    font-family: "Charis SIL", serif;
   }
   
   .search-bar {
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    transition: width 0.3s;
+  }
+  
+  .search-bar.expanded {
+    width: 300px;
   }
   
   .search-bar input[type="text"] {
-    width: 300px;
+    flex-grow: 1;
     padding: 0.5rem;
     border: none;
     border-radius: 5px 0 0 5px;
   }
   
   .search-bar button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 0 5px 5px 0;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background-color: #0056b3;
   }
   
   /* Responsive styles */

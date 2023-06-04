@@ -9,6 +9,9 @@ const Navbar = () => {
       <div className="navbar-logo">
         <img src={Logo} alt="Logo" />
       </div>
+      <div className="navbar-title">
+        <h1>Mindful Musings</h1>
+      </div>
       <div className="navbar-avatar">
         <img src={user} alt="Avatar" />
       </div>
