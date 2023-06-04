@@ -7,12 +7,13 @@
     box-sizing: border-box;
   }
 
+  
 .navbar {
     display: flex;
     justify-content: space-between;
     text-align: 'center';
     color: '#fff';
-    height: 64;
+    height:70px;
     padding-inline: 50;
     line-height: '64px';
     background-color: '#7dbcea';
@@ -23,25 +24,27 @@
     height: 50px;
     width: 50px;
     float: left;
-    position: relative;
-    margin: 10px 15px 15px 10px;
+    margin-top: 10px;
+    margin-left: 10px;
   }
   
-  .navbar-avatar img {
-    vertical-align: middle;
-    margin: 10px 15px 15px 10px;
-    width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    border-radius: 50%;
+  .navbar-login .button {
+    background-color: #f44336;
+    margin: 10px 10px 10px 10px;
+    border-radius: 8px;
+    padding: 10px;
   }
+
+
+  
 
   .navbar-title{
     font-family: "Kaushan Script", cursive;
     padding-top: 10px;
     font-size: 1.5rem;
     font-weight: 700;
-
+    height: 70px;
+      
  
   }
   
@@ -78,9 +81,12 @@
   
   .search {
     padding: 10px;
-    border: none;
-    border-radius: 20px 0 0 20px;
-    width: 200px;
+    border: 5px solid #333;
+    border-radius: 20px 0px 0px 20px;
+    width: 600px;
+    height: 50px;
+    font-family: "Kaushan Script", cursive;
+    font-size: medium;
   }
   
   .button {
@@ -90,14 +96,83 @@
     padding: 10px;
     background-color: black;
     border: none;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0px 20px 20px 0;
     color: white;
+    height: 50px; 
+    width: 70px;
   }
   
   .button:hover {
     background-color: #333;
     cursor: pointer;
   }
+
+.button-profile {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 80px;
+    height: 40px;
+    font-family: "Kaushan Script", cursive;
+    background-color: #f44336;
+  }
+
+  .profile-container {
+    position: relative;
+    height: 70px;
+    width: 70px;
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    font-family: "Kaushan Script", cursive;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    list-style: none;
+    background-color: #be4040;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    width : 100px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .dropdown-item {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: #333;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #bb9999;
+    border-radius: 5px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
   
   @media screen and (max-width: 768px) {
     .search-container {
@@ -105,12 +180,53 @@
     }
   
     .search {
-      border-radius: 20px;
-      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 20px 10px 10px 20px;
+      width: 200px;
     }
   
-    .button {
+    .button-profile {
       border-radius: 20px;
+      
     }
   }
+
+
+
+
+
+
   
+/* Media query for mobile screens */
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navbar-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-title {
+    text-align: center;
+    size: 0.1rem;
+  }
+
+  .profile-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown-menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .dropdown-item {
+    padding: 0.25rem;
+  }
+}

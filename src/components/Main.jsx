@@ -1,6 +1,9 @@
 import React from 'react'
 import './App.css';
 import {FaSearch} from 'react-icons/fa' ;
+
+import Feed from './Feed.jsx'
+
 // Main section component
 const MainSection = () => {
 
@@ -21,6 +24,7 @@ const MainSection = () => {
   <button className="button"><FaSearch/></button>
 </div>
  </section>
+ <Feed />
         
 </>
       
