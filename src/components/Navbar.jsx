@@ -7,8 +7,8 @@ import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 
 // Navbar component
 const Navbar = () => {
-  const [user, setUser] = useState([]);
-  const [profile, setProfile] = useState([]);
+  const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const login = useGoogleLogin({
@@ -53,25 +53,29 @@ const Navbar = () => {
 
       {/* Login with Google */}
       {profile ? (
-        
-          <div className="profile-container">
-            <img src={profile.picture} alt={profile.name} className="profile-image" onClick={toggleDropdown} />
-            {showDropdown && (
-              <ul className="dropdown-menu">
-                <li className="dropdown-item" onClick={logOut}>Logout</li>
-                <li className="dropdown-item">Profile</li>
-              
-              </ul>
-            )}
-          </div>
-        
+        <div className="profile-container">
+          <img
+            src={profile.picture}
+            alt={profile.name}
+            className="profile-image"
+            onClick={toggleDropdown}
+          />
+          {showDropdown && (
+            <ul className="dropdown-menu">
+              <li className="dropdown-item">{profile.name}</li>
+              <li className="dropdown-item" onClick={logOut}>Logout</li>
+              <li className="dropdown-item">Profile</li>
+            </ul>
+          )}
+        </div>
       ) : (
         <button className="button-profile" onClick={() => login()}>
-          Sign in{' '}
+          Sign in
         </button>
       )}
     </nav>
   );
 };
+
 
 export default Navbar;
