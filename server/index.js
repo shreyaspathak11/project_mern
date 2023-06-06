@@ -84,7 +84,7 @@ passport.use(
 // serialize and deserialize the user
 app.use(
   session({
-    secret: 'dummy123',
+    secret: 'dummy',
     resave: false,
     saveUninitialized: false,
   })
